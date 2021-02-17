@@ -14,4 +14,9 @@
       <option name="DART_TOPLEVEL" value="true" />
     </context>
   </template>
+  <template name="init:riverpod" value="import 'package:flutter/material.dart';&#10;import 'package:hooks_riverpod/hooks_riverpod.dart';&#10;import 'package:flutter_hooks/flutter_hooks.dart';&#10;&#10;&#10;final helloProvider = StateNotifierProvider((_) =&gt; Hello());&#10;&#10;class Hello extends StateNotifier&lt;String&gt; {&#10;  Hello() : super(&quot;hello!!&quot;);&#10;  void change(String v) =&gt; state = v;&#10;}&#10;&#10;void main() {&#10;  runApp(&#10;    ProviderScope(&#10;      child: HelloApp(),&#10;    ),&#10;  );&#10;}&#10;&#10;class HelloApp extends HookWidget {&#10;  @override&#10;  Widget build(BuildContext context) {&#10;    final state = useProvider(helloProvider.state);&#10;    final hello = useProvider(helloProvider);&#10;&#10;    return MaterialApp(&#10;      home: Scaffold(&#10;        appBar: AppBar(title: Text('HelloApp')),&#10;        body: Center(&#10;          child: Text(state.toString()),&#10;        ),&#10;        floatingActionButton: FloatingActionButton(&#10;          onPressed:() =&gt; hello.change(&quot;hoge&quot;),&#10;          child: Icon(Icons.add),&#10;        ),&#10;      ),&#10;    );&#10;  }&#10;}" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
 </templateSet>
