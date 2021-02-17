@@ -4,5 +4,5 @@
 Linux:
 ```
 $ cd ~/.config/Google/AndroidStudio4.1/templates/
-$ git clone https://github/hkiciy/live-templates.git
+$ git clone https://github/hkiciy/live-templates.git .
 ```
